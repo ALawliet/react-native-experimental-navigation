@@ -90,18 +90,21 @@ function forHorizontal(props: NavigationSceneRendererProps): Object {
 
   const opacity = position.interpolate({
     inputRange,
-    outputRange: [1, 1, 0.3],
+    //default: outputRange: [1, 1, 0.3],
+    outputRange: [1, 1, 0.5],
   });
 
   const scale = position.interpolate({
     inputRange,
-    outputRange: [1, 1, 0.95],
+    //default: outputRange: [1, 1, 0.95],
+    outputRange: [1, 1, 1],
   });
 
   const translateY = 0;
   const translateX = position.interpolate({
     inputRange,
-    outputRange: [width, 0, -10],
+    //default: outputRange: [width, 0, -10],
+    outputRange: [width, 0, 0],
   });
 
   return {
@@ -131,18 +134,21 @@ function forVertical(props: NavigationSceneRendererProps): Object {
 
   const opacity = position.interpolate({
     inputRange,
-    outputRange: [1, 1, 0.3],
+    //default: outputRange: [1, 1, 0.3],
+    outputRange: [1, 1, 0.5],
   });
 
   const scale = position.interpolate({
     inputRange,
-    outputRange: [1, 1, 0.95],
+    //default: outputRange: [1, 1, 0.95],
+    outputRange: [1, 1, 1],
   });
 
   const translateX = 0;
   const translateY = position.interpolate({
     inputRange,
-    outputRange: [height, 0, -10],
+    //default: outputRange: [height, 0, -10],
+    outputRange: [height, 0, 0],
   });
 
   return {
